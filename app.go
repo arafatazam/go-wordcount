@@ -12,6 +12,7 @@ type app struct {
 }
 
 func (a *app) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	a.log.Println("New request")
 	a.router.ServeHTTP(w, r)
 }
 
